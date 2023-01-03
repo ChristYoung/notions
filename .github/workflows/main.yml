@@ -27,5 +27,7 @@ jobs:
         run: npm install
 
       # deploy
+      - name: build apps
+        run: npm run build
+      
       - name: deploy apps
-        run: npm run deploy

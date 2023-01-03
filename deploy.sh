@@ -1,5 +1,7 @@
 #!/usr/bin/env sh
 
+# 如果github action失效, 可以本地执行npm run deploy, 将打包产物推送到github pages中
+
 # 确保脚本抛出遇到的错误
 set -e
 
@@ -8,9 +10,6 @@ npm run build
 
 # 进入生成的文件夹
 cd docs/.vuepress/dist
-
-git config --global user.email "858851768@qq.com"
-git config --global user.name "jie.yang"
 
 git init
 git add -A
