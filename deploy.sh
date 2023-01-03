@@ -9,6 +9,9 @@ npm run build
 # 进入生成的文件夹
 cd docs/.vuepress/dist
 
+git config --global user.email "858851768@qq.com"
+git config --global user.name "jie.yang"
+
 git init
 git add -A
 git commit -m 'deploy'
