@@ -1,1 +1,31 @@
+# github action market: https://github.com/marketplace/
+# 相关资料: https://github.com/mqyqingfeng/Blog/issues/237, https://www.bilibili.com/video/BV1Ca411h7rx/?spm_id_from=333.337.search-card.all.click&vd_source=331e677ebe8fb9f71371d84f2131be4f
 
+name: deploy-notions
+
+on:
+  push:
+    branches:
+      - "main"
+
+jobs:
+  build:
+    # 配置任务运行在最新的 Ubuntu Linux 运行器
+    runs-on: ubuntu-latest
+    steps:
+      # 这是一个可以检出仓库代码到运行器的动作，它允许你运行脚本或者其他动作侵入你的代码（比如构建或者测试工具）
+      - uses: actions/checkout@v3
+
+      # 安装nodejs环境, actions/setup-node@v3动作安装指定版本的 Nodejs, 这会在你的 PATH 加上 node 和 npm 命令
+      - name: install nodejs
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16.x"
+
+      # 安装依赖
+      - name: install deps
+        run: npm install
+
+      # deploy
+      - name: deploy apps
+        run: npm run deploy
