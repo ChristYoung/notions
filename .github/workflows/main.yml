@@ -1,5 +1,8 @@
 # github action market: https://github.com/marketplace/
-# 相关资料: https://github.com/mqyqingfeng/Blog/issues/237, https://www.bilibili.com/video/BV1Ca411h7rx/?spm_id_from=333.337.search-card.all.click&vd_source=331e677ebe8fb9f71371d84f2131be4f
+# 相关资料: 
+# https://github.com/mqyqingfeng/Blog/issues/237,
+# https://www.bilibili.com/video/BV1Ca411h7rx/?spm_id_from=333.337.search-card.all.click&vd_source=331e677ebe8fb9f71371d84f2131be4f,
+# https://juejin.cn/post/7008847699919241229
 
 name: deploy-notions
 
@@ -31,3 +34,10 @@ jobs:
         run: npm run build
       
       - name: deploy apps
+        working-directory: ./docs/.vuepress/dist
+        run: |
+          git init
+          git add -A
+          git -c user.name='ChristYoung' -c user.email='858851768@qq.com' commit -m 'deploy'
+          git remote add origin https://${{secrets.ACCESS_TOKEN}}@github.com/ChristYoung/yjclh.git master:gh-pages
+          git push origin main -f -q
