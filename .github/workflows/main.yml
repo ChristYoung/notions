@@ -35,10 +35,14 @@ jobs:
       - name: install deps
         run: npm install
 
-      # deploy
-      - name: build apps
-        run: npm run build
+      # build
+      # 使用deploy-github-pages-action后, 不需要build, 会自动build
+      # - name: build apps
+      #  run: npm run build
       
+      # deploy
+      # 使用action市场已有的action deploy-github-pages-action
+      # https://github.com/marketplace/actions/deploy-github-pages
       - name: deploy apps
         uses: ptienchuan/deploy-github-pages-action@master
         env:
