@@ -38,10 +38,16 @@ jobs:
         run: npm run build
       
       - name: deploy apps
-        working-directory: ./docs/.vuepress/dist
+        env: 
+          # Github page 仓库
+          GITHUB_REPO: git@github.com:ChristYoung/yjclh.git
+          # Coding 仓库
+          CODING_REPO: e.coding.net/yifanzheng/blogs.git
+          # 将编译后的博客文件推送到指定仓库
         run: |
-          git init
-          git add -A
-          git -c user.name='ChristYoung' -c user.email='858851768@qq.com' commit -m 'deploy'
-          git remote add origin https://${{secrets.ACCESS_TOKEN}}@github.com/ChristYoung/yjclh.git master:gh-pages
-          git push origin main -f -q
+          cd ../../docs/.vuepress/dist
+          git config user.name "ChristYoung"
+          git config user.email "858851768@qq.com"
+          git add .
+          git commit -m "GitHub Actions Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"
+          git push --force "https://${{ secrets.ACCESS_TOKEN }}@$GITHUB_REPO" master:gh-pages
