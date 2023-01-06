@@ -45,10 +45,11 @@ jobs:
           CODING_REPO: e.coding.net/yifanzheng/blogs.git
           # 将编译后的博客文件推送到指定仓库
         run: |
+          pwd
+          echo "-------------------------开始拷贝文件-------------------------------------"
           cd docs/.vuepress/dist
           git config user.name "ChristYoung"
           git config user.email "858851768@qq.com"
-          git config advice.addIgnoredFile false
           git add .
           git commit -m "GitHub Actions Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"
           git push --force "https://${{ secrets.ACCESS_TOKEN }}@$GITHUB_REPO" master:gh-pages
