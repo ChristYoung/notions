@@ -7,7 +7,7 @@ module.exports = {
     title: '前端笔记',
     description: '杨杰前端笔记',
     theme: 'reco',
-    base: '/yjclh/',
+    base: '/notions/',
     themeConfig: {
         nav: [
             // nav用来配置头部导航栏.
