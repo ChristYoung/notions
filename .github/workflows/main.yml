@@ -41,8 +41,6 @@ jobs:
         env: 
           # Github page 仓库
           GITHUB_REPO: git@github.com:ChristYoung/yjclh.git
-          # Coding 仓库
-          CODING_REPO: e.coding.net/yifanzheng/blogs.git
           # 将编译后的博客文件推送到指定仓库
         run: |
           pwd
@@ -52,4 +50,4 @@ jobs:
           git config user.email "858851768@qq.com"
           git add -A --force
           git commit -m "GitHub Actions Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"
-          git push --force "https://${{ secrets.ACCESS_TOKEN }}@$GITHUB_REPO" master:gh-pages
+          git push --force "https://${{ secrets.ACCESS_TOKEN }}@$GITHUB_REPO" main:gh-pages
