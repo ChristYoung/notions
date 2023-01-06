@@ -50,6 +50,6 @@ jobs:
           cd docs/.vuepress/dist
           git config user.name "ChristYoung"
           git config user.email "858851768@qq.com"
-          git add .
+          git add -A --force
           git commit -m "GitHub Actions Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"
           git push --force "https://${{ secrets.ACCESS_TOKEN }}@$GITHUB_REPO" master:gh-pages
