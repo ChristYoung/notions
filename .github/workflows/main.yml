@@ -40,17 +40,11 @@ jobs:
         run: npm run build
       
       - name: deploy apps
-        env: 
-          # Github page 仓库
-          GITHUB_REPO: git@github.com:ChristYoung/yjclh.git
-          # 将编译后的博客文件推送到指定仓库
-        run: |
-          pwd
-          echo "-------------------------开始拷贝文件${{ secrets.ACCESS_TOKEN }}-------------------------------------"
-          cd docs/.vuepress/dist
-          git config user.name "ChristYoung"
-          git config user.email "858851768@qq.com"
-          git remote set-url origin https://${{ secrets.ACCESS_TOKEN }}@$GITHUB_REPO
-          git add . --force
-          git commit -m "GitHub Actions Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"
-          git push --force "https://${{ secrets.ACCESS_TOKEN }}@$GITHUB_REPO" main:gh-pages
+        uses: ptienchuan/deploy-github-pages-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        with:
+          source-directory: "docs/.vuepress/dist"
+          target-branch: "gh-pages"
+          user-name: "ChristYoung"
+          user-email: "858851768@qq.com"
