@@ -45,7 +45,7 @@ jobs:
           CODING_REPO: e.coding.net/yifanzheng/blogs.git
           # 将编译后的博客文件推送到指定仓库
         run: |
-          cd ../../docs/.vuepress/dist
+          cd docs/.vuepress/dist
           git config user.name "ChristYoung"
           git config user.email "858851768@qq.com"
           git add .
