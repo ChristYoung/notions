@@ -7,6 +7,8 @@
 # github设置personal token: https://github.com/settings/tokens
 # 阮一峰老师教你入门github action: https://www.ruanyifeng.com/blog/2019/09/getting-started-with-github-actions.html
 # https://juejin.cn/post/7008847699919241229
+# https://juejin.cn/post/7035977625604456462
+# https://vuepress-theme-reco.recoluan.com/views/other/github-actions.html#%E8%AE%BE%E7%BD%AE-secrets
 
 name: deploy-notions
 
@@ -44,10 +46,11 @@ jobs:
           # 将编译后的博客文件推送到指定仓库
         run: |
           pwd
-          echo "-------------------------开始拷贝文件-------------------------------------"
+          echo "-------------------------开始拷贝文件${{ secrets.ACCESS_TOKEN }}-------------------------------------"
           cd docs/.vuepress/dist
           git config user.name "ChristYoung"
           git config user.email "858851768@qq.com"
+          git remote set-url origin https://${{ secrets.ACCESS_TOKEN }}@$GITHUB_REPO
           git add . --force
           git commit -m "GitHub Actions Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"
-          git push --force "${{ secrets.ACCESS_TOKEN }}@$GITHUB_REPO" main:gh-pages
+          git push --force "https://${{ secrets.ACCESS_TOKEN }}@$GITHUB_REPO" main:gh-pages
