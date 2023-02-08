@@ -72,6 +72,14 @@ module.exports = {
                 ]
             },
             {
+                title: 'GitHub',
+                path: '/notes/github/github1',
+                collapsable: false,
+                children: [
+                    { title: 'Git相关', path: '/notes/github/github1' }
+                ]
+            },
+            {
                 title: 'VsCode',
                 path: '/notes/vscode/myVscodeShortCut',
                 collapsable: false,
