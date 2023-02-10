@@ -86,3 +86,9 @@ type T3 = Unpacked<Promise<string>>; // string;
 type T4 = Unpacked<Unpacked<Promise<string>[]>>; // string; 还可以嵌套使用
 
  ```
+
+- 定义一个class数组类型, 数组的元素都是可以new的元素
+  ```typescript
+    export type ClassType<T> = { new (...args: any[]): T };
+  ```
+  
