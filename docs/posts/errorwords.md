@@ -13,11 +13,16 @@
 
  - corporation: n. /ˌkɔːrpəˈreɪʃ(ə)n/
 社团，公司，法人（团体）；市政当局
+
+- competent: adj. /ˈkɑːmpɪtənt/
+能干的，能胜任的；合格的，过得去的；精神正常的，智力无缺陷的；有决定权的；有法定资格的；活性的，（处于）感受态的
+be competent in : 在某方面有能力在…方面有能力
 <br />
 
 #### H
  - harmoniously: adv. /hɑːrˈmoʊniəsli/
 和谐地；调和地
+<br />
 
 #### P
  - personnel: n.
