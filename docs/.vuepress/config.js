@@ -57,6 +57,7 @@ module.exports = {
                     { title: '常用js代码收集', path: '/notes/javascript/js-usually' },
                     { title: '最全正则表达式大全', path: '/notes/javascript/js-regx' },
                     { title: '常见Promise问题', path: '/notes/javascript/promise' },
+                    { title: 'decodeURIComponent 和 decodeURI 以及unescape的定义和区别', path: '/notes/javascript/decodeURIComponent' },
                 ]
             },
             {
@@ -87,7 +88,8 @@ module.exports = {
                 path: '/notes/vscode/myVscodeShortCut',
                 collapsable: false,
                 children: [
-                    { title: '玩转vscode', path: '/notes/vscode/myVscodeShortCut' }
+                    { title: '玩转vscode', path: '/notes/vscode/myVscodeShortCut' },
+                    { title: '我的vscode配置', path: 'mySetting' },
                 ]
             },
             {
