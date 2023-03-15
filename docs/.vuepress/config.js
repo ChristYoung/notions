@@ -89,7 +89,7 @@ module.exports = {
                 collapsable: false,
                 children: [
                     { title: '玩转vscode', path: '/notes/vscode/myVscodeShortCut' },
-                    { title: '我的vscode配置', path: 'mySetting' },
+                    { title: '我的vscode配置', path: '/notes/vscode/mySetting' },
                 ]
             },
             {
