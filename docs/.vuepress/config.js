@@ -15,9 +15,9 @@ module.exports = {
             {
                 text: '社区文章摘录', link: '/posts/post-list',
             },
-            {
-                text: '英语', link: '/posts/errorwords'
-            }
+            // {
+            //     text: '英语', link: '/posts/errorwords'
+            // }
         ],
         sidebar: [
             {

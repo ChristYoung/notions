@@ -40,10 +40,9 @@
 ## Css相关
  - [<font size=4> 负边距布局</font>](http://www.cnblogs.com/2050/archive/2012/08/13/2636467.html#2457812)
 
-## 面试
-- [<font size=4> 为什么招聘高级前端开发这么难？</font>](https://www.zhihu.com/question/293047616/answer/502672659?utm_source=wechat_session&utm_medium=social&utm_oi=557177781184700416&utm_content=group2_Answer&utm_campaign=shareopn)
+<!-- ## 面试 -->
+<!-- - [<font size=4> 为什么招聘高级前端开发这么难？</font>](https://www.zhihu.com/question/293047616/answer/502672659?utm_source=wechat_session&utm_medium=social&utm_oi=557177781184700416&utm_content=group2_Answer&utm_campaign=shareopn)
 
-- [<font size=4>阿里前端攻城狮们写了一份前端面试题答案，请查收</font>](https://github.com/mqyqingfeng/frontend-interview-question-and-answer)
+- [<font size=4>阿里前端攻城狮们写了一份前端面试题答案，请查收</font>](https://github.com/mqyqingfeng/frontend-interview-question-and-answer) -->
 
-- 我的: Js逆向
  
