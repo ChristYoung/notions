@@ -8,3 +8,13 @@
  - git commit -m "first commit"
  - git remote add origin git@gitee.com:jayjayyoung123/nest-zues.git
 
+##### 如何给仓库添加多个origin
+ - 1.查看现有几个仓库
+ - 2.添加一个远程仓库:
+  ```
+  git remote add [your origin name] [your origin repo url]   
+  ```
+ - 3. 推送代码
+  ```
+  git push [your origin name]
+  ```
