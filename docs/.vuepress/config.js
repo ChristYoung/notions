@@ -8,13 +8,21 @@ module.exports = {
     description: '杨杰前端笔记',
     theme: 'reco',
     base: '/notions/',
+    head: [
+        [
+          'link', { href: "https://cdn.jsdelivr.net/npm/@docsearch/css@3", rel: "stylesheet" }
+        ],
+        [
+          'script', { src: "https://cdn.jsdelivr.net/npm/@docsearch/js@3" }
+        ]
+    ],
     themeConfig: {
-        algolia: {
-            apiKey: '5f669c59288fc7f04ce565bae59e961d',
-            indexName: 'notions',
-            // 如果 Algolia 没有为你提供 `appId` ，使用 `BH4D9OD16A` 或者移除该配置项
-            appId: 'WNMYY748BP',
-        },
+        // algolia: {
+        //     apiKey: '5f669c59288fc7f04ce565bae59e961d',
+        //     indexName: 'notions',
+        //     // 如果 Algolia 没有为你提供 `appId` ，使用 `BH4D9OD16A` 或者移除该配置项
+        //     appId: 'WNMYY748BP',
+        // },
         nav: [
             // nav用来配置头部导航栏.
             { text: '首页', link: '/' },
