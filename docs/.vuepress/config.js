@@ -45,6 +45,14 @@ module.exports = {
         ],
         sidebar: [
             {
+                title: 'Mac操作及相关',
+                path: '',
+                collapsable: false,
+                children: [
+                    { title: 'Mac常用快捷键', path: '/notes/mac/shortcut' },
+                ]
+            },
+            {
                 title: 'Angular',
                 path: '/notes/angular/angular1',
                 collapsable: false,
