@@ -50,6 +50,7 @@ module.exports = {
                 collapsable: false,
                 children: [
                     { title: 'Mac常用快捷键', path: '/notes/mac/shortcut' },
+                    { title: 'Mac文件的相关操作', path: '/notes/mac/macFile' },
                 ]
             },
             {
