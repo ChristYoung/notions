@@ -30,6 +30,7 @@
     - com + shift + delete: 直接清空Trash.
     - com + space: 打开聚焦搜索.
     - com + c, com + opt + v: 先复制文件, 然后粘贴(相当于是剪切的意思).
+    - com + shift + . : 显示被隐藏的文件.
   
  #### Mac效率神器
     - 空格: 在不触发程序的情况下, 预览文件的内容.
