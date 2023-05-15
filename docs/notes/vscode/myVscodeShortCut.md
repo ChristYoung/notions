@@ -34,12 +34,14 @@
 
 
 ### 代码块:
-| 快捷键           | 描述                     | 命令ID           |
-| ---------------- | ------------------------ | ---------------- |
-| Ctrl + k&o       | 快速折叠整个文件的代码   | editor.foldAll   |
-| Ctrl + k&j       | 快速展开整个文件的代码   | editor.unfoldAll |
-| Ctrl + Shift + [ | 折叠当前光标所在的代码块 | editor.fold      |
-| Ctrl + Shift + ] | 展开当前光标所在的代码块 | editor.unfold    |
+| 快捷键                   | 描述                     | 命令ID           |
+| ------------------------ | ------------------------ | ---------------- |
+| Ctrl + k&o               | 快速折叠整个文件的代码   | editor.foldAll   |
+| Ctrl + k&j               | 快速展开整个文件的代码   | editor.unfoldAll |
+| Ctrl + Shift + [         | 折叠当前光标所在的代码块 | editor.fold      |
+| Ctrl + Shift + ]         | 展开当前光标所在的代码块 | editor.unfold    |
+| Shift + Opt + O(Mac系统) | 删除无效的import         | Organize Imports |
+
 
 
 ### 辅助操作栏
