@@ -72,13 +72,13 @@
 | Ctrl + p         | git push                       | git.sync                |
 
 ### 终端控制台
-| 快捷键        | 描述               | 命令ID                                  |
-| ------------- | ------------------ | --------------------------------------- |
-| Ctrl + j      | 打开/隐藏 控制台   | workbench.action.togglePanel            |
-| f1            | 最大化 控制台      | workbench.action.toggleMaximizedPanel   |
-| Ctrl + q      | 终止所有的终端     | workbench.action.terminal.killAll       |
-| Ctrl + F9     | 终止当前活动的终端 | workbench.action.terminal.kill          |
-| Ctrl + PageUp | 切换上一个终端     | workbench.action.terminal.focusPrevious |
+| 快捷键                                        | 描述               | 命令ID                                  |
+| --------------------------------------------- | ------------------ | --------------------------------------- |
+| Ctrl + j                                      | 打开/隐藏 控制台   | workbench.action.togglePanel            |
+| f1                                            | 最大化 控制台      | workbench.action.toggleMaximizedPanel   |
+| Ctrl + q                                      | 终止所有的终端     | workbench.action.terminal.killAll       |
+| Ctrl + F9/Command + Shift + K (Mac系统系统)   | kill当前活动的终端 | workbench.action.terminal.kill          |
+| Ctrl + PageUp/Command + Shift + "\["(Mac系统) | 切换上一个终端     | workbench.action.terminal.focusPrevious |
 
 ### Bookmark插件
 | 快捷键         | 描述              | 命令ID                      |
