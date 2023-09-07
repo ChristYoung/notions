@@ -1,13 +1,12 @@
 ### 我的常用vscoe配置
 ```json
-
 {
     "git.ignoreLegacyWarning": true,
     "editor.minimap.enabled": false,
     "workbench.editor.enablePreview": false,
     "git.path": "C:/Program Files (x86)/Git/bin/git.exe",
     "git.autofetch": false,
-    "editor.fontFamily": "mononoki,Monaco,Operator Mono,'Cascadia Code',source code pro,Zed Mono,Fira Code,Iosevka",
+    "editor.fontFamily": "mononoki,Operator Mono,Monaco,'Cascadia Code',source code pro,Zed Mono,Fira Code,Iosevka",
     "editor.fontLigatures": true,
     "editor.snippetSuggestions": "inline",
     "window.autoDetectHighContrast": false,
@@ -24,23 +23,23 @@
         "**/logs": true,
     },
     // 这些文件将不会显示在工作空间中
-    "files.exclude": {
-        "**/.git": true,
-        "**/.svn": true,
-        "**/.hg": true,
-        "**/CVS": true,
-        "**/.DS_Store": true,
-        "**/*.js": {
-            "when": "$(basename).ts" // ts编译后生成的js文件将不会显示在工作空中
-        },
-        "**/node_modules": true
+    // "files.exclude": {
+    //     "**/.git": true,
+    //     "**/.svn": true,
+    //     "**/.hg": true,
+    //     "**/CVS": true,
+    //     "**/.DS_Store": true,
+    //     "**/*.js": {
+    //         "when": "$(basename).ts" // ts编译后生成的js文件将不会显示在工作空中
+    //     },
+    //     "**/node_modules": true
+    // },
+    "eslint.enable": true, // 开启eslint检查
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
     },
-    "[typescript]": {
-        "editor.codeActionsOnSave": {
-            "source.fixAll.eslint": true
-        },
-        "editor.formatOnSave": true
-    },
+    "editor.formatOnSave": true,
+    "prettier.requireConfig": true, // 需要Prettier的配置文件
     "typescript.format.semicolons": "insert",
     "typescript.preferences.quoteStyle": "single",
     "[markdown]": {
@@ -63,7 +62,7 @@
         "*.wxss": "css",
         "*.wxs": "javascript"
     },
-    "editor.fontSize": 12,
+    "editor.fontSize": 13,
     "javascript.updateImportsOnFileMove.enabled": "always",
     "emmet.includeLanguages": {
         "wxml": "html"
@@ -71,84 +70,84 @@
     // 光标丝滑移动
     "editor.cursorBlinking": "smooth",
     "editor.cursorSmoothCaretAnimation": "on",
-    "editor.tokenColorCustomizations": {
-        "textMateRules": [
-            {
-                "name": "italic font",
-                "scope": [
-                    "comment",
-                    "keyword",
-                    "storage",
-                    "keyword.control",
-                    "keyword.control.from",
-                    "keyword.control.flow",
-                    "keyword.operator.new",
-                    "keyword.control.import",
-                    "keyword.control.export",
-                    "keyword.control.default",
-                    "keyword.control.trycatch",
-                    "keyword.control.conditional",
-                    "storage.type",
-                    "storage.type.class",
-                    "storage.type.interface",
-                    "storage.modifier.tsx",
-                    "storage.type.function",
-                    "storage.modifier.async",
-                    "variable.language",
-                    "variable.language.this",
-                    "variable.language.super",
-                    "variable.other.object",
-                    "variable.parameter",
-                    "variable.other.enummember",
-                    "variable.other.readwrite.alias",
-                    "variable.other.readwrite",
-                    "variable.other.constant",
-                    "variable.other.property",
-                    "variable.other.object.property",
-                    "variable.object.property",
-                    "support.variable.property",
-                    "meta.import",
-                    "meta.interface",
-                    "meta.block",
-                    "meta.object-literal.key",
-                    "meta.object.member",
-                    "meta.decorator",
-                    "meta.definition.variable",
-                    "meta.preprocessor.scope",
-                    "constant.language.null",
-                    "support.type.primitive",
-                    "entity.name.method.js",
-                    "entity.other.attribute-name",
-                    "entity.name.type",
-                    "entity.name.type.class",
-                    "entity.name.function",
-                    "entity.name.type.enum",
-                    "entity.name.type.interface",
-                    "punctuation.definition.comment",
-                    "text.html.basic entity.other.attribute-name",
-                    "tag.decorator.js entity.name.tag.js",
-                    "tag.decorator.js punctuation.definition.tag.js",
-                    "source.js constant.other.object.key.js string.unquoted.label.js",
-                    "punctuation.definition.tag.end",
-                    "meta.tag.custom.end",
-                    "text.html.derivative",
-                    "string.quoted.single",
-                ],
-                "settings": {
-                    "fontStyle": "italic",
-                }
-            },
-            {
-                "name": "normal font",
-                "scope": [
-                    "meta.block"
-                ],
-                "settings": {
-                    "fontStyle": "",
-                }
-            }
-        ]
-    },
+    // "editor.tokenColorCustomizations": {
+    //     "textMateRules": [
+    //         {
+    //             "name": "italic font",
+    //             "scope": [
+    //                 "comment",
+    //                 "keyword",
+    //                 "storage",
+    //                 "keyword.control",
+    //                 "keyword.control.from",
+    //                 "keyword.control.flow",
+    //                 "keyword.operator.new",
+    //                 "keyword.control.import",
+    //                 "keyword.control.export",
+    //                 "keyword.control.default",
+    //                 "keyword.control.trycatch",
+    //                 "keyword.control.conditional",
+    //                 "storage.type",
+    //                 "storage.type.class",
+    //                 "storage.type.interface",
+    //                 "storage.modifier.tsx",
+    //                 "storage.type.function",
+    //                 "storage.modifier.async",
+    //                 "variable.language",
+    //                 "variable.language.this",
+    //                 "variable.language.super",
+    //                 "variable.other.object",
+    //                 "variable.parameter",
+    //                 "variable.other.enummember",
+    //                 "variable.other.readwrite.alias",
+    //                 "variable.other.readwrite",
+    //                 "variable.other.constant",
+    //                 "variable.other.property",
+    //                 "variable.other.object.property",
+    //                 "variable.object.property",
+    //                 "support.variable.property",
+    //                 "meta.import",
+    //                 "meta.interface",
+    //                 "meta.block",
+    //                 "meta.object-literal.key",
+    //                 "meta.object.member",
+    //                 "meta.decorator",
+    //                 "meta.definition.variable",
+    //                 "meta.preprocessor.scope",
+    //                 "constant.language.null",
+    //                 "support.type.primitive",
+    //                 "entity.name.method.js",
+    //                 "entity.other.attribute-name",
+    //                 "entity.name.type",
+    //                 "entity.name.type.class",
+    //                 "entity.name.function",
+    //                 "entity.name.type.enum",
+    //                 "entity.name.type.interface",
+    //                 "punctuation.definition.comment",
+    //                 "text.html.basic entity.other.attribute-name",
+    //                 "tag.decorator.js entity.name.tag.js",
+    //                 "tag.decorator.js punctuation.definition.tag.js",
+    //                 "source.js constant.other.object.key.js string.unquoted.label.js",
+    //                 "punctuation.definition.tag.end",
+    //                 "meta.tag.custom.end",
+    //                 "text.html.derivative",
+    //                 "string.quoted.single",
+    //             ],
+    //             "settings": {
+    //                 "fontStyle": "italic",
+    //             }
+    //         },
+    //         {
+    //             "name": "normal font",
+    //             "scope": [
+    //                 "meta.block"
+    //             ],
+    //             "settings": {
+    //                 "fontStyle": "",
+    //             }
+    //         }
+    //     ]
+    // },
     "minapp-vscode.disableAutoConfig": true,
     "eslint.validate": [
         "vue"
@@ -188,7 +187,7 @@
         "editor.findMatchBorder": "#2979FF",
         "selection.background": "#2979FF40"
     },
-    "editor.defaultFormatter": "vscode.typescript-language-features",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "task.slowProviderWarning": [
         "gulp"
     ],
@@ -197,7 +196,7 @@
         "suppressGitVersionWarning": true
     },
     "terminal.integrated.fontWeightBold": "bold",
-    "editor.lineHeight": 36,
+    "editor.lineHeight": 21,
     "git.confirmSync": false,
     "security.workspace.trust.untrustedFiles": "open",
     "explorer.compactFolders": false,
@@ -231,9 +230,14 @@
     },
     "git.openRepositoryInParentFolders": "always",
     "workbench.startupEditor": "none",
-    "workbench.colorTheme": "Blueberry dark theme",
+    "workbench.colorTheme": "Eclipse Color Theme",
     "window.zoomLevel": 1.2,
+    "cSpell.userWords": [
+        "autofetch",
+        "Cascadia",
+        "liveramp",
+        "mononoki"
+    ],
 }
-
 ```
 
