@@ -1,4 +1,4 @@
-### 我的常用vscoe配置
+### 我的常用vscode配置
 ```json
 {
     "git.ignoreLegacyWarning": true,
@@ -241,3 +241,5 @@
 }
 ```
 
+### Setting Token Scope设置
+ command + shift + p: 选择"Developer: Inspect Editor Tokens and Scopes", 可以查看编辑面板元素的Scope名称
