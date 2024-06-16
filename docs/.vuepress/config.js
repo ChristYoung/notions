@@ -65,6 +65,14 @@ module.exports = {
         ],
       },
       {
+        title: "React",
+        path: "/notes/react/react1",
+        collapsable: false,
+        children: [
+          { title: "React中Key的作用", path: "/notes/react/react1" },
+        ]
+      },
+      {
         title: "Vue3",
         path: "/notes/vue3/vue-a",
         collapsable: false,
@@ -82,7 +90,7 @@ module.exports = {
         ],
       },
       {
-        title: "javascript",
+        title: "Javascript",
         path: "/notes/javascript/input-event",
         collapsable: false,
         children: [
