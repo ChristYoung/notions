@@ -18,3 +18,12 @@
   ```
   git push [your origin name]
   ```
+#### 修改指定repo的gitt提交的username和email
+
+ - 1. 打开.git/config文件, 添加如下配置:
+  ```bash
+  [user]
+	name='jay.yang'
+	email='858851768@qq.com'
+  ```
+  

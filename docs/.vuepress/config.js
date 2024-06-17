@@ -69,6 +69,7 @@ module.exports = {
         path: "/notes/react/react1",
         collapsable: false,
         children: [
+          { title: 'React文章摘录', path: '/notes/react/react0' },
           { title: "React中Key的作用", path: "/notes/react/react1" },
         ]
       },
@@ -143,6 +144,7 @@ module.exports = {
         path: "/notes/vscode/myVscodeShortCut",
         collapsable: false,
         children: [
+          { title: 'vscode user snippets', path: '/notes/vscode/snippets' },
           { title: "玩转vscode", path: "/notes/vscode/myVscodeShortCut" },
           { title: "我的vscode配置", path: "/notes/vscode/mySetting" },
         ],
