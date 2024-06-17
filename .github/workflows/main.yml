@@ -1,6 +1,6 @@
 # github action 如何配置secret.ACCESS_TOKEN
 # https://blog.csdn.net/ht370671963/article/details/111995883
-name: deploy-notions
+name: 🥷 build and deploy notions
 
 on:
   push:
@@ -8,32 +8,27 @@ on:
       - "main"
 
 jobs:
-  build:
-    # 配置任务运行在最新的 Ubuntu Linux 运行器
+  npm-build:
+    name: 💅 npm build process
     runs-on: ubuntu-latest
     steps:
-      # 这是一个可以检出仓库代码到运行器的动作，它允许你运行脚本或者其他动作侵入你的代码（比如构建或者测试工具）
-      - uses: actions/checkout@v3
-
+      # actions/checkout@v4这是一个可以检出仓库代码到运行器的动作，它允许你运行脚本或者其他动作侵入你的代码（比如构建或者测试工具）
+      - name: 🧞‍♂️ Load the content of the repository
+        uses: actions/checkout@v4
       # 安装nodejs环境, actions/setup-node@v3动作安装指定版本的 Nodejs, 这会在你的 PATH 加上 node 和 npm 命令
-      - name: install nodejs
+      - name: 📦 install nodejs
         uses: actions/setup-node@v3
         with:
-          node-version: "16.x"
-
-      # 安装依赖
-      - name: install deps
+          node-version: "20.x"
+      - name: 🪜 install the dependencies
         run: npm install
+      - name: 🛠 build the project
+        run: npm run build
 
-      # build
-      # 使用deploy-github-pages-action后, 不需要build, 会自动build
-      # - name: build apps
-      #  run: npm run build
-      
       # deploy
       # 使用action市场已有的action deploy-github-pages-action
       # https://github.com/marketplace/actions/deploy-github-pages
-      - name: deploy apps
+      - name: 🚀 deploy this project
         uses: ptienchuan/deploy-github-pages-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
