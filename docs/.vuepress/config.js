@@ -9,7 +9,9 @@ module.exports = {
   description: "杨杰前端笔记",
   // theme: 'reco', // 不能使用特定的theme,否则会导致docSearch不生效
   base: "/notions/",
-  // plugins: [['vuepress-plugin-code-copy', true]], // 代码复制插件
+  plugins: [
+    './plugins/code-copy'
+  ], // 代码复制插件
   themeConfig: {
     algolia: {
       apiKey: "5f669c59288fc7f04ce565bae59e961d",
@@ -96,14 +98,14 @@ module.exports = {
         path: "/notes/css/css-feature",
         collapsable: false,
         children: [
-          // {
-          //   title: "flex布局", path: '', children: [
-          //     {
-          //       title: "手动拖动展示图片的列表页面",
-          //       path: "/notes/css/css-flex-shrink",
-          //     },
-          //   ]
-          // },
+          {
+            title: "flex布局", path: '', children: [
+              {
+                title: "手动拖动展示图片的列表页面",
+                path: "/notes/css/css-flex-shrink",
+              },
+            ]
+          },
           { title: "css特性收集", path: "/notes/css/css-feature" },
           { title: "css打印样式", path: "/notes/css/css-print-style" },
           {
