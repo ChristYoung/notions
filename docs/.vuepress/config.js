@@ -110,19 +110,23 @@ module.exports = {
         ],
       },
       {
-        title: "css",
+        title: "CSS",
         path: "/notes/css/css-feature",
         collapsable: false,
         children: [
+          {
+            title: "flex布局", path: '', children: [
+              {
+                title: "手动拖动展示图片的列表页面",
+                path: "/notes/css/css-flex-shrink",
+              },
+            ]
+          },
           { title: "css特性收集", path: "/notes/css/css-feature" },
           { title: "css打印样式", path: "/notes/css/css-print-style" },
           {
             title: "css getComputedStyle",
             path: "/notes/css/css-getComputedStyle",
-          },
-          {
-            title: "手动拖动展示图片的列表页面",
-            path: "/notes/css/css-flex-shrink",
           },
           { title: "footer-sticker", path: "/notes/css/css-footerstick" },
           { title: "absolute固定定位", path: "/notes/css/css-absoulte-fixed" },
