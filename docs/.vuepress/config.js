@@ -108,6 +108,10 @@ module.exports = {
                 title: 'flex实现footer吸底',
                 path: "/notes/css/css-flex-footer-fixed",
               },
+              {
+                title: "flex子元素溢出父元素",
+                path: "/notes/css/css-flex-horizion-width",
+              },
             ]
           },
           { title: "css特性收集", path: "/notes/css/css-feature" },
