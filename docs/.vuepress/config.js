@@ -7,24 +7,9 @@
 module.exports = {
   title: "前端笔记",
   description: "杨杰前端笔记",
-  // theme: 'reco',
+  // theme: 'reco', // 不能使用特定的theme,否则会导致docSearch不生效
   base: "/notions/",
-  // plugins: [
-  //     docsearchPlugin({
-  //         apiKey: '5f669c59288fc7f04ce565bae59e961d',
-  //         indexName: 'notions',
-  //         // 如果 Algolia 没有为你提供 `appId` ，使用 `BH4D9OD16A` 或者移除该配置项
-  //         appId: 'WNMYY748BP',
-  //     }),
-  //   ],
-  // head: [
-  //     [
-  //       'link', { href: "https://cdn.jsdelivr.net/npm/@docsearch/css@3", rel: "stylesheet" }
-  //     ],
-  //     [
-  //       'script', { src: "https://cdn.jsdelivr.net/npm/@docsearch/js@3" }
-  //     ]
-  // ],
+  // plugins: [['vuepress-plugin-code-copy', true]], // 代码复制插件
   themeConfig: {
     algolia: {
       apiKey: "5f669c59288fc7f04ce565bae59e961d",
@@ -39,9 +24,6 @@ module.exports = {
         text: "社区文章摘录",
         link: "/posts/post-list",
       },
-      // {
-      //     text: '英语', link: '/posts/errorwords'
-      // }
     ],
     sidebar: [
       {
@@ -114,14 +96,14 @@ module.exports = {
         path: "/notes/css/css-feature",
         collapsable: false,
         children: [
-          {
-            title: "flex布局", path: '', children: [
-              {
-                title: "手动拖动展示图片的列表页面",
-                path: "/notes/css/css-flex-shrink",
-              },
-            ]
-          },
+          // {
+          //   title: "flex布局", path: '', children: [
+          //     {
+          //       title: "手动拖动展示图片的列表页面",
+          //       path: "/notes/css/css-flex-shrink",
+          //     },
+          //   ]
+          // },
           { title: "css特性收集", path: "/notes/css/css-feature" },
           { title: "css打印样式", path: "/notes/css/css-print-style" },
           {
