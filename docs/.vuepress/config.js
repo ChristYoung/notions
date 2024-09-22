@@ -104,6 +104,10 @@ module.exports = {
                 title: "手动拖动展示图片的列表页面",
                 path: "/notes/css/css-flex-shrink",
               },
+              {
+                title: 'flex实现footer吸底',
+                path: "/notes/css/css-flex-footer-fixed",
+              },
             ]
           },
           { title: "css特性收集", path: "/notes/css/css-feature" },
