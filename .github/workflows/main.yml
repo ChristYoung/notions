@@ -21,9 +21,9 @@ jobs:
         with:
           node-version: "16.x"
       - name: 🪜 install the dependencies
-        run: npm install
+        run: yarn install
       - name: 🛠 build the project
-        run: npm run build
+        run: yarn build
 
       # deploy
       # 使用action市场已有的action deploy-github-pages-action
