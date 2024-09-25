@@ -14,5 +14,7 @@
   "devDependencies": {
     "vuepress": "^1.9.7"
   },
-  "dependencies": {}
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
 }

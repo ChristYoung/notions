@@ -4,8 +4,19 @@
 // https://www.cnblogs.com/glassysky/p/13387739.html.
 // https://zhuanlan.zhihu.com/p/444863193.
 
+// 需要引入如下配置才能正确加载env文件中的配置
+require('dotenv').config();
+const webpack = require('webpack');
+
 module.exports = {
-  title: "前端笔记",
+  configureWebpack: (config) => {
+    return {
+      plugins: [
+        new webpack.EnvironmentPlugin({ ...process.env })
+      ]
+    }
+  },
+  title: `前端笔记`,
   description: "杨杰前端笔记",
   // theme: 'reco', // 不能使用特定的theme,否则会导致docSearch不生效
   base: "/notions/",
@@ -14,10 +25,9 @@ module.exports = {
   ], // 代码复制插件
   themeConfig: {
     algolia: {
-      apiKey: "5f669c59288fc7f04ce565bae59e961d",
+      appId: process.env.VUE_APP_ALGOLIA_APP_ID,
+      apiKey: process.env.VUE_APP_ALGOLIA_API_KEY,
       indexName: "notions",
-      // 如果 Algolia 没有为你提供 `appId` ，使用 `BH4D9OD16A` 或者移除该配置项
-      appId: "WNMYY748BP",
     },
     nav: [
       // nav用来配置头部导航栏.

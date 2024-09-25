@@ -23,6 +23,9 @@ jobs:
       - name: 🪜 install the dependencies
         run: yarn install
       - name: 🛠 build the project
+        env:
+          VUE_APP_ALGOLIA_APP_ID: ${{ secrets.VUE_APP_ALGOLIA_APP_ID }}
+          VUE_APP_ALGOLIA_API_KEY: ${{ secrets.VUE_APP_ALGOLIA_API_KEY }}
         run: yarn build
 
       # deploy
