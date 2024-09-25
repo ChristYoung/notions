@@ -35,6 +35,8 @@ jobs:
         uses: ptienchuan/deploy-github-pages-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          VUE_APP_ALGOLIA_APP_ID: ${{ secrets.VUE_APP_ALGOLIA_APP_ID }}
+          VUE_APP_ALGOLIA_API_KEY: ${{ secrets.VUE_APP_ALGOLIA_API_KEY }}
         with:
           source-directory: "docs/.vuepress/dist"
           target-branch: "gh-pages"
