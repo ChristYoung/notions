@@ -56,6 +56,7 @@ module.exports = {
           { title: "angular lib", path: "/notes/angular/angular-lib" },
           { title: "rxjs的基本概念", path: "/notes/angular/rxjs" },
           { title: "rxjs操作符", path: "/notes/angular/rxjs-operator" },
+          { title: "在angular中使用msw模拟接口数据", path: "/notes/angular/msw" },
         ],
       },
       {
