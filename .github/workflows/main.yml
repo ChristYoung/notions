@@ -21,7 +21,7 @@ jobs:
         with:
           node-version: "16.x"
       - name: 🪜 install the dependencies
-        run: yarn install
+        run: yarn install --frozen-lockfile
       - name: 🛠 build the project
         env:
           VUE_APP_ALGOLIA_APP_ID: ${{ secrets.VUE_APP_ALGOLIA_APP_ID }}
